@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
 const armorSchema = new mongoose.Schema({
+    Img : { type: String, required: true},
     Name:  { type: String, required: true },
     Rarity: {type: [String], enum: ['common', 'uncommon', 'rare', 'epic', 'legendary'], required: true },
     Material:{type: String, required: true },
@@ -8,7 +9,7 @@ const armorSchema = new mongoose.Schema({
     Stats2:{type: String, required: true },
     Stats3:{type: String, required: true },
     Hidden_Feature:{type: String, required: true },
-    Quantity_Left:{type: String, required: true },
+    Quantity_Left:{type: Number, required: true },
     Cost:{type: String, required: true }
 });
 
