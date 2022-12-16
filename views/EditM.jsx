@@ -5,6 +5,7 @@ class EditM extends React.Component{
     render(){
         return(
             <DefaultLayout title = "Miscellaneous Modding Page">
+    <link rel="stylesheet" type="text/css" href='../styles/edit.css'/>
                 <form action={`/Miscellaneous/${this.props.Miscellaneous._id}?_method=PUT`} method="POST">
                 Img: <input type='image' name='img' disabled  defaultValue={this.props.Miscellaneous.Img} />
                  <br />
