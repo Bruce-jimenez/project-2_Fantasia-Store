@@ -6,7 +6,7 @@ render(){
     return(
         <div>
             <h1>Weapons Show Page</h1>
-            {this.props.Weapons.Name} is of {this.props.Weapons.Rarity} rarity. It is made of {this.props.Weapons.Materials}.
+            {this.props.Weapons.Name} is of {this.props.Weapons.Rarity} rarity. It is made of {this.props.Weapons.Material}.
                 <br />
             Stats 1: {this.props.Weapons.Stats1}
                 <br />
