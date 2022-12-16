@@ -31,33 +31,40 @@ mongoose.connect(process.env.MONGO_URI, {
     console.log("Mongo Connection Established");
   });
 
-const firstArmor = {
-    Img:"https://mcishop.azureedge.net/mciassets/0061324_leather-body-armour_300.png",
-    Name:"Basic Leather Set",
-    Rarity:0,
-    Material:"Cow Hide",
-    Stats1:"+2 Defense",
-    Stats2:"+1 Dexterity",
-    Stats3:"None",
-    Hidden_Feature:"Slightly More Durable",
-    Quantity_Left:3,
-    Cost:"2 Bronze",
-}
+//Introduced the schema to the databases
 
-  buyingArmor.create(firstArmor)
+// const firstItem = {
+//     Img:"image.png",
+//     Name:"Makeshift potion",
+//     Rarity:'common',
+//     Material:"clear potion with some mushrooms",
+//     Stats1:"+1 attack",
+//     Stats2:"+1 healing factor",
+//     Stats3:"+1 speed",
+//     Hidden_Feature:"With another item i can be used for the entire party",
+//     Quantity_Left:4,
+//     Cost:" 4 Bronze",
+// }
 
+//   buyingMisc.create(firstItem)
+///////////////////////////////
 
 ///////////////////////
 //Main Page (A home page to direct to each different part of the store)
 
-app.get("/MainPG", (req, res) =>{
-   res.render("Main");
+// app.get("/MainPG", (req, res) =>{
+//    res.render("Main");
+// });
+
+
+app.get("/", (req, res) =>{
+   res.show("Nothing");
 });
 
 
 //////////////////////
 //Index for Armory, Weaponry, Item Shelf
-app.get("/MainPG/Armor", (req, res) =>{
+app.get("/Armor", (req, res) =>{
     buyingArmor.find({}, (error, allArmor) => {
         res.render("IndexA", {
             Armor: allArmor
@@ -65,7 +72,7 @@ app.get("/MainPG/Armor", (req, res) =>{
     });
 });
 
-app.get("/MainPG/Weapons", (req, res) =>{
+app.get("/Weapons", (req, res) =>{
     buyingWeapons.find({}, (error, allWeapons) => {
         res.render("IndexW", {
             Weapons: allWeapons
@@ -73,10 +80,10 @@ app.get("/MainPG/Weapons", (req, res) =>{
     });
 });
 
-app.get("/MainPG/Miscellaneous", (req, res) =>{
-    buyingMisc.find({}, (error, allMisc) => {
+app.get("/Miscellaneous", (req, res) =>{
+    buyingMisc.find({}, (error, allMiscellaneous) => {
         res.render("IndexM", {
-            Misc: allMisc
+            Miscellaneous: allMiscellaneous
         });
     });
 });
@@ -86,15 +93,15 @@ app.get("/MainPG/Miscellaneous", (req, res) =>{
 //////////////////////
 //New route for Armory, Weaponry, Item Shelf
 
-app.get("/MainPG/Armor/New", (req, res) =>{
+app.get("/Armor/NewA", (req, res) =>{
     res.render("NewA");
 });
 
-app.get("/MainPG/Weapons/New", (req, res) =>{
+app.get("/Weapons/NewW", (req, res) =>{
     res.render("NewW");
 });
 
-app.get("/MainPG/Miscellaneous/New", (req, res) =>{
+app.get("/Miscellaneous/NewM", (req, res) =>{
     res.render("NewM");
 });
 
@@ -102,21 +109,21 @@ app.get("/MainPG/Miscellaneous/New", (req, res) =>{
 
 //////////////////////
 //Delete Route for Armory, Weaponry, Item Shelf
-app.delete('/MainPG/Armor/:id', (req, res) =>{
+app.delete('/Armor/:id', (req, res) =>{
     buyingArmor.findByIdAndRemove(req.params.id, (err, data)=>{
-        res.redirect('/MainPG/Armor');
+        res.redirect('/Armor');
     });
 });
 
-app.delete('/MainPG/Weapons/:id', (req, res) =>{
+app.delete('/Weapons/:id', (req, res) =>{
     buyingWeapons.findByIdAndRemove(req.params.id, (err, data)=>{
-        res.redirect('/MainPG/Weapons');
+        res.redirect('/Weapons');
     });
 });
 
-app.delete('/MainPG/Miscellaneous/:id', (req, res) =>{
+app.delete('/Miscellaneous/:id', (req, res) =>{
     buyingMisc.findByIdAndRemove(req.params.id, (err, data)=>{
-        res.redirect('/MainPG/Miscellaneous');
+        res.redirect('/Miscellaneous');
     });
 });
 
@@ -124,21 +131,21 @@ app.delete('/MainPG/Miscellaneous/:id', (req, res) =>{
 
 ///////////////////////
 //Update Route for Armory, Weaponry, Item Shelf
-app.put('/MainPG/Armor/:id', (req, res) =>{
+app.put('/Armor/:id', (req, res) =>{
     buyingArmor.findByIdAndUpdate(req.params.id, req.body, (err, updateArmor)=>{
-        res.redirect(`/MainPG/Armor/${req.params.id}`);
+        res.redirect(`/Armor/${req.params.id}`);
     });
 });
 
-app.put('/MainPG/Weapons/:id', (req, res) =>{
+app.put('/Weapons/:id', (req, res) =>{
     buyingWeapons.findByIdAndUpdate(req.params.id, req.body, (err, updateWeapons)=>{
-        res.redirect(`/MainPG/Weapons/${req.params.id}`);
+        res.redirect(`/Weapons/${req.params.id}`);
     });
 });
 
-app.put('/MainPG/Miscellaneous/:id', (req, res) =>{
+app.put('/Miscellaneous/:id', (req, res) =>{
     buyingMisc.findByIdAndUpdate(req.params.id, req.body, (err, updateMisc)=>{
-        res.redirect(`/MainPG/Miscellaneous/${req.params.id}`);
+        res.redirect(`/Miscellaneous/${req.params.id}`);
     });
 });
 
@@ -146,21 +153,21 @@ app.put('/MainPG/Miscellaneous/:id', (req, res) =>{
 
 /////////////////////////
 //Create Route for Armor, Weaponry, Item Shelf
-app.post("/MainPG/Armor", (req, res) =>{
+app.post("/Armor", (req, res) =>{
     buyingArmor.create(req.body, (err, forgedArmor) =>{
-        res.redirect("/MainPG/Armor");
+        res.redirect("/Armor");
     });
 });
 
-app.post("/MainPG/Weapons", (req, res) =>{
+app.post("/Weapons", (req, res) =>{
     buyingWeapons.create(req.body, (err, forgedWeapon) =>{
-        res.redirect("/MainPG/Weapons");
+        res.redirect("/Weapons");
     });
 });
 
-app.post("/MainPG/Miscellaneous", (req, res) =>{
+app.post("/Miscellaneous", (req, res) =>{
     buyingMisc.create(req.body, (err, createdItem) =>{
-        res.redirect("/MainPG/Miscellaneous");
+        res.redirect("/Miscellaneous");
     });
 });
 
@@ -168,7 +175,7 @@ app.post("/MainPG/Miscellaneous", (req, res) =>{
 
 /////////////////////////
 //Edit Route for Armor, Weaponry, Item Shelf
-app.get("/MainPG/Armor/:id/edit", (req, res) =>{
+app.get("/Armor/:id/edit", (req, res) =>{
     buyingArmor.findById(req.params.id, (err, foundArmor)=>{
         if(!err){
             res.render('EditA', {Armor: foundArmor});
@@ -178,7 +185,7 @@ app.get("/MainPG/Armor/:id/edit", (req, res) =>{
     });
 });
 
-app.get("/MainPG/Weapons/:id/edit", (req, res) =>{
+app.get("/Weapons/:id/edit", (req, res) =>{
     buyingWeapons.findById(req.params.id, (err, foundWeapon)=>{
         if(!err){
             res.render('EditW', {Weapons: foundWeapon});
@@ -188,7 +195,7 @@ app.get("/MainPG/Weapons/:id/edit", (req, res) =>{
     });
 });
 
-app.get("/MainPG/Miscellaneous/:id/edit", (req, res) =>{
+app.get("/Miscellaneous/:id/edit", (req, res) =>{
     buyingMisc.findById(req.params.id, (err, foundItem)=>{
         if(!err){
             res.render('EditM', {Miscellaneous: foundItem});
@@ -201,19 +208,19 @@ app.get("/MainPG/Miscellaneous/:id/edit", (req, res) =>{
 
 /////////////////////
 // Show Route for Armory, Weaponry, Item Shelf
-app.get("/MainPG/Armor/:id", function (req, res) {
+app.get("/Armor/:id", function (req, res) {
     buyingArmor.findById(req.params.id, (err, foundArmor) =>{
         res.render("ShowA", {Armor: foundArmor});
     });
 });
 
-app.get("/MainPG/Weapons/:id", function (req, res) {
+app.get("/Weapons/:id", function (req, res) {
     buyingWeapons.findById(req.params.id, (err, foundWeapon) =>{
         res.render("ShowW", {Weapons: foundWeapon});
     });
 });
 
-app.get("/MainPG/Miscellaneous/:id", function (req, res) {
+app.get("/Miscellaneous/:id", function (req, res) {
     buyingMisc.findById(req.params.id, (err, foundItem) =>{
         res.render("ShowM", {Miscellaneous: foundItem});
     });
