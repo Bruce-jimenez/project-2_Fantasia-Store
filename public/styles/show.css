@@ -1,0 +1,9 @@
+body{
+    border: radius 2px;;
+    background-image: url('https://media.istockphoto.com/id/620951116/photo/panoramic-view-of-colorful-sunrise-in-mountains.jpg?s=612x612&w=0&k=20&c=6IO5LBwLVSBPxQD4L5NlrxRkygeocjA5OKg8iKqvT58=');
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

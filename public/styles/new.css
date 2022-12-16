@@ -1,0 +1,9 @@
+body{
+    border: radius 2px;;
+    background-image: url('https://i.pinimg.com/originals/6e/6a/00/6e6a00eb540f087edae078afec8156b8.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
