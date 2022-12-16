@@ -24,7 +24,7 @@ class EditM extends React.Component{
                  <br />
                  Cost: <input type='text' name='Cost' defaultValue={this.props.Miscellaneous.Cost} />
                  <br />
-                 <input type='Submit' name="" value='Create New Item' /> 
+                 <input type='Submit' name="" value='Set the Modifications' /> 
                 
                 
                 

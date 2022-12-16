@@ -26,7 +26,7 @@ class EditA extends React.Component{
                  <br />
                  Cost: <input type='text' name='Cost' defaultValue={this.props.Weapons.Cost} />
                  <br />
-                 <input type='Submit' name="" value='Forge New Weapon' /> 
+                 <input type='Submit' name="" value='Set the Modifications' /> 
                 
                 
                 
