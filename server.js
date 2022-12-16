@@ -14,6 +14,7 @@ app.use((req, res, next) => {
     console.log("I run for all routes");
     next();
   });
+app.use(express.static(__dirname+'/public'))
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false }));
 
