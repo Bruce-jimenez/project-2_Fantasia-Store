@@ -5,7 +5,10 @@ class ShowW extends React.Component{
 render(){
     return(
         <div>
+    <link rel="stylesheet" type="text/css" href="../styles/show.css"/>
             <h1>Weapons Show Page</h1>
+            <img src={`${this.props.Weapons.image}`} alt="Image of Weapon Selected" />
+            <br />
             {this.props.Weapons.Name} is of {this.props.Weapons.Rarity} rarity. It is made of {this.props.Weapons.Material}.
                 <br />
             Stats 1: {this.props.Weapons.Stats1}

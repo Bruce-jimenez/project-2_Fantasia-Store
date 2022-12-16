@@ -5,7 +5,10 @@ class ShowA extends React.Component{
 render(){
     return(
         <div>
+<link rel="stylesheet" type="text/css" href="../styles/show.css"/>
             <h1>Armor Show Page</h1>
+            <img src={`${this.props.Armor.image}`} alt="Image of Armor Selected" />
+            <br />
             {this.props.Armor.Name} is of {this.props.Armor.Rarity} rarity. It is made of {this.props.Armor.Material}.
                 <br />
             Stats 1: {this.props.Armor.Stats1}

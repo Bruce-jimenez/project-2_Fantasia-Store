@@ -5,6 +5,7 @@ class IndexW extends React.Component{
     render(){
         return(
             <DefaultLayout title ={"Weapons Index"}>
+    <link rel="stylesheet" type="text/css" href="../styles/index.css"/>
                 <h1>Weapons Page</h1>
                 <ul>
                     {this.props.Weapons.map((Weapons, i) =>{

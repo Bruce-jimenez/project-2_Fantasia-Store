@@ -5,6 +5,7 @@ class IndexM extends React.Component{
     render(){
         return(
             <DefaultLayout title ={"Miscellaneous Index"}>
+    <link rel="stylesheet" type="text/css" href="../styles/index.css"/>
                 <h1>Miscellaneous Page</h1>
                 <ul>
                     {this.props.Miscellaneous.map((Miscellaneous, i) =>{

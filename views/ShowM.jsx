@@ -5,7 +5,10 @@ class ShowM extends React.Component{
 render(){
     return(
         <div>
+    <link rel="stylesheet" type="text/css" href="../styles/show.css"/>
             <h1>Miscellaneous Show Page</h1>
+            <img src={`${this.props.Miscellaneous.image}`} alt="Image of Item Selected" />
+            <br />
             {this.props.Miscellaneous.Name} is of {this.props.Miscellaneous.Rarity} rarity. It is made of {this.props.Miscellaneous.Material}.
                 <br />
             Stats 1: {this.props.Miscellaneous.Stats1}
