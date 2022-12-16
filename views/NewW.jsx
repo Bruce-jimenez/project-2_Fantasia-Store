@@ -5,10 +5,10 @@ class NewW extends React.Component{
         return(
             <div>
                 <h1>Weapon Creation Page</h1>
-                <form action ='/Weapons' method = 'POST'>
-                Img: <input type='image' name='img'  />
+                <form action ='/Weapons' method='POST'>
+                Img: <input type='text' name='Img'  />
                  <br />
-                Name: <input type='text' name='name'  />
+                Name: <input type='text' name='Name'  />
                  <br />
                  Rarity: <input type='text' name='Rarity' />
                  <br /> 

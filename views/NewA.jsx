@@ -6,9 +6,9 @@ class NewA extends React.Component{
             <div>
                 <h1>Armor Creation Page</h1>
                 <form action ='/Armor' method = 'POST'>
-                 Img: <input type='image' name='img' disabled />
+                 Img: <input type='text' name='Img'  />
                  <br />
-                 Name: <input type='text' name='name' disabled />
+                 Name: <input type='text' name='Name'  />
                  <br />
                  Rarity: <input type='text' name='Rarity' />
                  <br /> 
