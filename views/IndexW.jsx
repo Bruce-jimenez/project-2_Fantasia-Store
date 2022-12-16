@@ -7,7 +7,7 @@ class IndexW extends React.Component{
             <DefaultLayout title ={"Weapons Index"}>
                 <h1>Weapons Page</h1>
                 <ul>
-                    {this.props.Weapons.map((ArWeaponsmor, i) =>{
+                    {this.props.Weapons.map((Weapons, i) =>{
                         return(
                             <li>
                                 The <a href = {`/Weapons/${Weapons.id}`}> {Weapons.Name} </a> is {" "}
@@ -23,7 +23,7 @@ class IndexW extends React.Component{
                                 <br />
                                 A hidden feature is {Weapons.Hidden_Feature}.
                                 <br />
-                                There is only {Weapons.Quantity_Left} left at a price of 
+                                There is only {Weapons.Quantity_Left} left at a price of {" "} 
                                 {Weapons.Cost}.
                                 <br />
                                 <a href = {`/Weapons/${Weapons._id}/edit`}>Modifications</a>

@@ -23,7 +23,7 @@ class IndexA extends React.Component{
                                 <br />
                                 A hidden feature is {Armor.Hidden_Feature}.
                                 <br />
-                                There is only {Armor.Quantity_Left} left at a price of 
+                                There is only {Armor.Quantity_Left} left at a price of {" "}
                                 {Armor.Cost}.
                                 <br />
                                 <a href = {`/Armor/${Armor._id}/edit`}>Modifications</a>

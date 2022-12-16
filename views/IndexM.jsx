@@ -4,7 +4,7 @@ const DefaultLayout = require('./Default');
 class IndexM extends React.Component{
     render(){
         return(
-            <DefaultLayout title ={"Misc. Index"}>
+            <DefaultLayout title ={"Miscellaneous Index"}>
                 <h1>Miscellaneous Page</h1>
                 <ul>
                     {this.props.Miscellaneous.map((Miscellaneous, i) =>{
@@ -21,7 +21,7 @@ class IndexM extends React.Component{
                                 <br />
                                 A hidden feature is {Miscellaneous.Hidden_Feature}.
                                 <br />
-                                There is only {Miscellaneous.Quantity_Left} left at a price of 
+                                There is only {Miscellaneous.Quantity_Left} left at a price of {" "}
                                 {Miscellaneous.Cost}.
                                 <br />
                                 <a href = {`/Miscellaneous/${Miscellaneous._id}/edit`}>Modifications</a>
