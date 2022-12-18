@@ -7,7 +7,7 @@ render(){
         <div>
     <link rel="stylesheet" type="text/css" href="../styles/show.css"/>
             <h1>Weapons Show Page</h1>
-            <img src={`${this.props.Weapons.image}`} alt="Image of Weapon Selected" />
+            <img src={`${this.props.Weapons.Img}`} alt="Image of Weapon Selected" />
             <br />
             {this.props.Weapons.Name} is of {this.props.Weapons.Rarity} rarity. It is made of {this.props.Weapons.Material}.
                 <br />
@@ -19,7 +19,7 @@ render(){
                 <br />
             A hidden feature is {this.props.Weapons.Hidden_Feature}.
                 <br />
-            There is only {this.props.Weapons.Quantity_Left} left at a price of 
+            There is only {this.props.Weapons.Quantity_Left} left at a price of {" "}
               {this.props.Weapons.Cost}.
                 <br />
 

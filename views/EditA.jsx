@@ -4,8 +4,8 @@ const DefaultLayout = require('./Default');
 class EditA extends React.Component{
     render(){
         return(
-            <DefaultLayout title = "Armor Modding Page">
-    <link rel="stylesheet" type="text/css" href='../styles/edit.css'/>
+            <DefaultLayout title ={"Armor Modding Page"}>
+    <link rel="stylesheet" type="text/css" href="../styles/edit.css"/>
                 <form action={`/Armor/${this.props.Armor._id}?_method=PUT`} method="POST">
                 Img: <input type='image' name='img' disabled  defaultValue={this.props.Armor.Img} />
                  <br />

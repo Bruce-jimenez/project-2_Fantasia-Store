@@ -7,7 +7,7 @@ render(){
         <div>
     <link rel="stylesheet" type="text/css" href="../styles/show.css"/>
             <h1>Miscellaneous Show Page</h1>
-            <img src={`${this.props.Miscellaneous.image}`} alt="Image of Item Selected" />
+            <img src={`${this.props.Miscellaneous.Img}`} alt="Image of Item Selected" />
             <br />
             {this.props.Miscellaneous.Name} is of {this.props.Miscellaneous.Rarity} rarity. It is made of {this.props.Miscellaneous.Material}.
                 <br />
@@ -17,7 +17,7 @@ render(){
                 <br />
             A hidden feature is {this.props.Miscellaneous.Hidden_Feature}.
                 <br />
-            There is only {this.props.Miscellaneous.Quantity_Left} left at a price of 
+            There is only {this.props.Miscellaneous.Quantity_Left} left at a price of {" "}
               {this.props.Miscellaneous.Cost}.
                 <br />
 
