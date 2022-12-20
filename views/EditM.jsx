@@ -1,17 +1,12 @@
 const React = require('react');
 const DefaultLayout = require('./Default');
 
-const body = {
-    backgroundColor: "brown",
-    backgroundSize: "cover",
-}
-
 class EditM extends React.Component{
     render(){
         return(
-            <div style={body}>
+           
             <DefaultLayout title ={"Miscellaneous Modding Page"}>
-    <link rel="stylesheet" type="text/css" href="../styles/edit.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/edit.css" />
     <img src={`${this.props.Miscellaneous.Img}`} alt="Image of Item Selected" />
                 <form action={`/Miscellaneous/${this.props.Miscellaneous._id}?_method=PUT`} method="POST">
                 Img: <input type='image' name='img' disabled  defaultValue={this.props.Miscellaneous.Img} />
@@ -39,7 +34,7 @@ class EditM extends React.Component{
                 </form>    
 
             </DefaultLayout>
-            </div>
+           
         )
     }
 }

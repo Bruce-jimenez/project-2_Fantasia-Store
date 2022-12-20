@@ -4,7 +4,7 @@ class NewW extends React.Component{
     render(){
         return(
             <div>
-    <link rel="stylesheet" type="text/css" href="../styles/new.css"/>
+    <link rel="stylesheet" type="text/css" href="/styles/new.css"/>
                 <h1>Weapon Creation Page</h1>
                 <form action ='/Weapons' method='POST'>
                 Img: <input type='text' name='Img'  />

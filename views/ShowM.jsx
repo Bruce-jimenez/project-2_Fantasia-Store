@@ -6,7 +6,7 @@ class ShowM extends React.Component{
     render(){ 
     return(
         <div>
-    <link rel="stylesheet" type="text/css" href="../styles/show.css"/>
+    <link rel="stylesheet" type="text/css" href="/styles/show.css"/>
             <h1>Miscellaneous Show Page</h1>
             <img src={`${this.props.Miscellaneous.Img}`} alt="Image of Item Selected" />
             <br />

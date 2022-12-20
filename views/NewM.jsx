@@ -4,7 +4,7 @@ class NewM extends React.Component{
     render(){
         return(
             <div>
-    <link rel="stylesheet" type="text/css" href="../styles/new.css"/>
+    <link rel="stylesheet" type="text/css" href="/styles/new.css"/>
                 <h1>Misc. Creation Page</h1>
                 <form action ='/Miscellaneous' method = 'POST'>
                 Img: <input type='text' name='Img'  />

@@ -6,7 +6,7 @@ class ShowA extends React.Component{
 render(){
     return(
         <div>
-<link rel="stylesheet" type="text/css" href="../styles/show.css"/>
+<link rel="stylesheet" type="text/css" href="/styles/show.css"/>
             <h1>Armor Show Page</h1>
             <img src={`${this.props.Armor.Img}`} alt="Image of Armor Selected" />
             <br />

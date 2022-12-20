@@ -1,17 +1,13 @@
 const React = require('react');
 const DefaultLayout = require('./Default');
 
-// const body = {
-//     backgroundColor: "brown",
-//     backgroundSize: "cover",
-// }
+
 
 class EditA extends React.Component{
     render(){
         return(
-            // <div style={body}>
         <DefaultLayout title ={"Armor Modding Page"}>
-        <link rel="stylesheet" type="text/css" href="../styles/edit.css"/>
+        <link rel="stylesheet" type="text/css" href="/styles/edit.css"/>
         <img src={`${this.props.Armor.Img}`} alt="Image of Item Selected" />
                 <form action={`/Armor/${this.props.Armor._id}?_method=PUT`} method="POST">
                 Img: <input type='image' name='img' disabled  defaultValue={this.props.Armor.Img} />
@@ -41,7 +37,7 @@ class EditA extends React.Component{
                 </form>    
 
             </DefaultLayout>
-        // </div>
+
         )
     }
 }

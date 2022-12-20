@@ -5,7 +5,7 @@ class IndexA extends React.Component{
     render(){
         return(
             <DefaultLayout title ={"Armor Index"}>
-    <link rel="stylesheet" type="text/css" href="../styles/index.css"/>
+    <link rel="stylesheet" type="text/css" href="/styles/index.css"/>
                 <h1>Armor Page</h1>
                 <ul>
                     {this.props.Armor.map((Armor, i) =>{

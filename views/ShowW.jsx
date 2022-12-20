@@ -7,7 +7,7 @@ class ShowW extends React.Component{
     render(){
     return(
         <div>
-    <link rel="stylesheet" type="text/css" href="../styles/show.css"/>
+    <link rel="stylesheet" type="text/css" href="/styles/show.css"/>
             <h1>Weapons Show Page</h1>
             <img src={`${this.props.Weapons.Img}`} alt="Image of Weapon Selected" />
             <br />
