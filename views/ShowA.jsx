@@ -1,6 +1,7 @@
 const React = require('react');
 
 
+
 class ShowA extends React.Component{
 render(){
     return(
@@ -22,7 +23,6 @@ render(){
             There is only {this.props.Armor.Quantity_Left} left at a price of {" "}
               {this.props.Armor.Cost}.
                 <br />
-
                     <nav>
                         <a href='/Armor'>Return to Armory</a>    
                     </nav>      

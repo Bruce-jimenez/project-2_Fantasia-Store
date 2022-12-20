@@ -1,11 +1,17 @@
 const React = require('react');
 const DefaultLayout = require('./Default');
 
+const body = {
+    backgroundColor: "brown",
+    backgroundSize: "cover",
+}
+
 class EditA extends React.Component{
     render(){
         return(
             <DefaultLayout title ={"Weapons Modding Page"}>
     <link rel="stylesheet" type="text/css" href="../styles/edit.css"/>
+    <img src={`${this.props.Weapons.Img}`} alt="Image of Item Selected" />
                 <form action={`/Weapons/${this.props.Weapons._id}?_method=PUT`} method="POST">
                 Img: <input type='image' name='img' disabled  defaultValue={this.props.Weapons.Img} />
                  <br />

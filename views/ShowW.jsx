@@ -1,8 +1,10 @@
 const React = require('react');
 
 
+
 class ShowW extends React.Component{
-render(){
+
+    render(){
     return(
         <div>
     <link rel="stylesheet" type="text/css" href="../styles/show.css"/>
@@ -23,6 +25,9 @@ render(){
               {this.props.Weapons.Cost}.
                 <br />
 
+                
+                
+                <br />
                     <nav>
                         <a href='/Weapons'>Return to Weaponry</a>    
                     </nav>      

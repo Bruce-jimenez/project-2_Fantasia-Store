@@ -1,8 +1,9 @@
 const React = require('react');
 
 
+
 class ShowM extends React.Component{
-render(){
+    render(){ 
     return(
         <div>
     <link rel="stylesheet" type="text/css" href="../styles/show.css"/>
@@ -21,6 +22,9 @@ render(){
               {this.props.Miscellaneous.Cost}.
                 <br />
 
+              
+              
+                <br />
                     <nav>
                         <a href='/Miscellaneous'>Return to Miscellaneous Shelf</a>    
                     </nav>      
