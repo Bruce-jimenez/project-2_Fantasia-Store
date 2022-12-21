@@ -6,3 +6,55 @@ body{
     align-items: center;
     justify-content: center;
 }
+
+h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 50%;
+    margin: auto;
+    width: 50%;
+    font-size: 4rem;
+    font-family:cursive;
+    color: rgba(155, 115, 15, 0.808);
+  }
+  
+  #formation {
+    position: relative;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px 0;
+    color: gold;
+  }
+  
+  #formation > div {
+    width: 300px;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+  }
+  
+  nav {
+    position: absolute;
+    bottom: 20px;
+    right: 35px;
+    display: flex;
+    font-size: 3rem;
+   
+  }
+  
+ .create{
+    color: rgba(139, 19, 19, 0.911);
+ }
+
+ .Naming{
+    color:rgb(15, 15, 15);
+    font-size: 1.5rem;
+ }
+
+ .Modding{
+    color:darkred;
+    font-size: 1.5rem;
+ }

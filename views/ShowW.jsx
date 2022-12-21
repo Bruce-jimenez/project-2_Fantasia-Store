@@ -1,14 +1,26 @@
 const React = require('react');
+const buyingWeapons = require('../models/Weapons');
 
 
 
 class ShowW extends React.Component{
 
     render(){
+const buyingAction = () => {
+
+    if(this.props.Weapons.Quantity_Left > 0){
+        return <div> <form action={`Weapons/buy/${buyingWeapons.id}?_method=PUT`} method="POST">
+        <input type="submit" value=" Buy " />
+                    </form>
+                </div>
+} else {
+    return <h3>Out of Stock</h3>
+}
+}
     return(
         <div>
     <link rel="stylesheet" type="text/css" href="/styles/show.css"/>
-            <h1>Weapons Show Page</h1>
+            <h1 className='Title'>Weapons Show Page</h1>
             <img src={`${this.props.Weapons.Img}`} alt="Image of Weapon Selected" />
             <br />
             {this.props.Weapons.Name} is of {this.props.Weapons.Rarity} rarity. It is made of {this.props.Weapons.Material}.
@@ -24,7 +36,7 @@ class ShowW extends React.Component{
             There is only {this.props.Weapons.Quantity_Left} left at a price of {" "}
               {this.props.Weapons.Cost}.
                 <br />
-
+            {buyingAction()}
                 
                 
                 <br />

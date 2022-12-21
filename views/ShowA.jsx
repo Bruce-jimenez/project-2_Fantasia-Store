@@ -1,9 +1,21 @@
 const React = require('react');
+const buyingArmor = require('../models/Armor');
 
 
 
 class ShowA extends React.Component{
 render(){
+    const buyingAction = () => {
+
+        if(this.props.Armor.Quantity_Left > 0){
+            return <div> <form action={`Armor/buy/${buyingArmor.id}?_method=PUT`} method="POST">
+            <input type="submit" value=" Buy " />
+                        </form>
+                    </div>
+    } else {
+        return <h3>Out of Stock</h3>
+    }
+    }
     return(
         <div>
 <link rel="stylesheet" type="text/css" href="/styles/show.css"/>
@@ -22,6 +34,10 @@ render(){
                 <br />
             There is only {this.props.Armor.Quantity_Left} left at a price of {" "}
               {this.props.Armor.Cost}.
+                <br />
+
+                {buyingAction()}
+
                 <br />
                     <nav>
                         <a href='/Armor'>Return to Armory</a>    

@@ -4,14 +4,15 @@ const DefaultLayout = require('./Default');
 class IndexW extends React.Component{
     render(){
         return(
-            <DefaultLayout title ={"Weapons Index"}>
+            <DefaultLayout title ={"Weapons Page"}>
     <link rel="stylesheet" type="text/css" href="/styles/index.css"/>
-                <h1>Weapons Page</h1>
+                
                 <ul>
                     {this.props.Weapons.map((Weapons, i) =>{
                         return(
-                            <li>
-                                The <a href = {`/Weapons/${Weapons.id}`}> {Weapons.Name} </a> is {" "}
+                     
+                        <div id='formation'>
+                                <a href = {`/Weapons/${Weapons.id}`} className= "Naming"> {Weapons.Name} </a> is {" "}
                                 is of {Weapons.Rarity} Rarity.
                                 <br />
                                 It is made of {Weapons.Material}.
@@ -27,18 +28,18 @@ class IndexW extends React.Component{
                                 There is only {Weapons.Quantity_Left} left at a price of {" "} 
                                 {Weapons.Cost}.
                                 <br />
-                                <a href = {`/Weapons/${Weapons._id}/edit`}>Modifications</a>
+                                <a href = {`/Weapons/${Weapons._id}/edit`} className="Modding">Modifications</a>
                                 <form action = {`/Weapons/${Weapons._id}?_method=DELETE`} method="POST">
                                     <input type="Submit" value="DELETE"/>
                                 </form>
-
-                            </li>
+                            </div>
+                        
                         );
                     })}
                 </ul>
 
 <nav>
-    <a href='/Weapons/NewW'>Forge New Weapon</a>
+    <a href='/Weapons/NewW' className='create'>Forge New Weapon</a>
 </nav>
 
 

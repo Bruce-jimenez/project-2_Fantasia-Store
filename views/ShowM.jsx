@@ -1,9 +1,21 @@
 const React = require('react');
+const buyingMisc = require('../models/Miscellaneous');
 
 
 
 class ShowM extends React.Component{
     render(){ 
+        const buyingAction = () => {
+
+            if(this.props.Miscellaneous.Quantity_Left > 0){
+                return <div> <form action={`Miscellaneous/buy/${buyingMisc.id}?_method=PUT`} method="POST">
+                <input type="submit" value=" Buy " />
+                            </form>
+                        </div>
+        } else {
+            return <h3>Out of Stock</h3>
+        }
+        }       
     return(
         <div>
     <link rel="stylesheet" type="text/css" href="/styles/show.css"/>
@@ -22,7 +34,7 @@ class ShowM extends React.Component{
               {this.props.Miscellaneous.Cost}.
                 <br />
 
-              
+                {buyingAction()}
               
                 <br />
                     <nav>

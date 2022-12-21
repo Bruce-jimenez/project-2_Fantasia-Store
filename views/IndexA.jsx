@@ -4,14 +4,15 @@ const DefaultLayout = require('./Default');
 class IndexA extends React.Component{
     render(){
         return(
-            <DefaultLayout title ={"Armor Index"}>
+            <DefaultLayout title ={"Armor Page"}>
     <link rel="stylesheet" type="text/css" href="/styles/index.css"/>
-                <h1>Armor Page</h1>
+                
                 <ul>
                     {this.props.Armor.map((Armor, i) =>{
                         return(
-                            <li>
-                                The <a href = {`/Armor/${Armor.id}`}> {Armor.Name} </a> is {" "}
+                            
+                            <div id='formation'>
+                                <a href = {`/Armor/${Armor.id}`} className= "Naming"> {Armor.Name} </a> is {" "}
                                 is of {Armor.Rarity} Rarity.
                                 <br />
                                 It is made of {Armor.Material}.
@@ -27,18 +28,19 @@ class IndexA extends React.Component{
                                 There is only {Armor.Quantity_Left} left at a price of {" "}
                                 {Armor.Cost}.
                                 <br />
-                                <a href = {`/Armor/${Armor._id}/edit`}>Modifications</a>
+                                <a href = {`/Armor/${Armor._id}/edit`} className="Modding">Modifications</a>
+                                
                                 <form action = {`/Armor/${Armor._id}?_method=DELETE`} method="POST">
                                     <input type="Submit" value="DELETE"/>
                                 </form>
-
-                            </li>
+                            </div>
+                          
                         );
                     })}
                 </ul>
 
 <nav>
-    <a href='/Armor/NewA'>Forge New Armor</a>
+    <a href='/Armor/NewA' className='create'>Forge New Armor</a>
 </nav>
 
 
