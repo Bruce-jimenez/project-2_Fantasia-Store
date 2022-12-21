@@ -9,5 +9,17 @@ body{
 }
 
 .Title{
-    color: ;
+    color: gold;
+
+}
+
+div{
+    color: azure;
+    font-size: 1.05rem;
+}
+
+a{
+    color: blanchedalmond;
+    font-size: 1.25rem;
+   font-style: oblique;
 }
