@@ -4,14 +4,16 @@ const DefaultLayout = require('./Default');
 class IndexM extends React.Component{
     render(){
         return(
-            <DefaultLayout title ={"Miscellaneous Index"}>
+            <DefaultLayout title ={"Miscellaneous Page"}>
     <link rel="stylesheet" type="text/css" href="/styles/index.css"/>
-                <h1>Miscellaneous Page</h1>
+                
                 <ul>
                     {this.props.Miscellaneous.map((Miscellaneous, i) =>{
                         return(
-                            <li>
-                                The <a href = {`/Miscellaneous/${Miscellaneous.id}`}> {Miscellaneous.Name} </a> is {" "}
+                           
+                            
+                            <div id='formation'>
+                                <a href = {`/Miscellaneous/${Miscellaneous.id}`} className= "Naming"> {Miscellaneous.Name} </a> is {" "}
                                 is of {Miscellaneous.Rarity} Rarity.
                                 <br />
                                 It is made of {Miscellaneous.Material}.
@@ -24,19 +26,22 @@ class IndexM extends React.Component{
                                 <br />
                                 There is only {Miscellaneous.Quantity_Left} left at a price of {" "}
                                 {Miscellaneous.Cost}.
+                                
                                 <br />
-                                <a href = {`/Miscellaneous/${Miscellaneous._id}/edit`}>Modifications</a>
+                           
+                                <a href = {`/Miscellaneous/${Miscellaneous._id}/edit`} className="Modding">Modifications</a>
+                         
                                 <form action = {`/Miscellaneous/${Miscellaneous._id}?_method=DELETE`} method="POST">
                                     <input type="Submit" value="DELETE"/>
                                 </form>
-
-                            </li>
+                                </div>    
+                            
                         );
                     })}
                 </ul>
 
 <nav>
-    <a href='/Miscellaneous/NewM'>Create a New Item</a>
+    <a href='/Miscellaneous/NewM' className='create'>Create a New Item</a>
 </nav>
 
 
