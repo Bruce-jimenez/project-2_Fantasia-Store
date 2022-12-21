@@ -25,7 +25,7 @@ class NewM extends React.Component{
                  <br />
                  Cost: <input type='text' name='Cost' />
                  <br />
-                 <input type='Submit' name="" value='Creat New Miscellaneous Item' />   
+                 <input type='Submit' name="" value='Create New Miscellaneous Item' />   
                 </form>
             </div>
         )
