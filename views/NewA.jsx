@@ -3,7 +3,7 @@ const React = require('react');
 class NewA extends React.Component{
     render(){
         return(
-            <div>
+            <div className='formBody'>
     <link rel="stylesheet" type="text/css" href="/styles/new.css"/>
                 <h1>Armor Creation Page</h1>
                 <form action ='/Armor' method = 'POST'>
