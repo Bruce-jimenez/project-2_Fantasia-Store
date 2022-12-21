@@ -9,7 +9,12 @@ class EditM extends React.Component{
     <link rel="stylesheet" type="text/css" href="/styles/edit.css" />
     <img src={`${this.props.Miscellaneous.Img}`} alt="Image of Item Selected" />
                 <form action={`/Miscellaneous/${this.props.Miscellaneous._id}?_method=PUT`} method="POST">
+            <div className='modifyItems'>
+
+                <div className='imageClear'>
                 Img: <input type='image' name='img' disabled  defaultValue={this.props.Miscellaneous.Img} />
+                </div>
+                 
                  <br />
                 Name: <input type='text' name='name' disabled defaultValue={this.props.Miscellaneous.Name}/>
                  <br />
@@ -26,6 +31,7 @@ class EditM extends React.Component{
                  Quantity_Left: <input type='number' name='Quantity_Left' defaultValue={this.props.Miscellaneous.Quantity_Left} />
                  <br />
                  Cost: <input type='text' name='Cost' defaultValue={this.props.Miscellaneous.Cost} />
+            </div>
                  <br />
                  <input type='Submit' name="" value='Set the Modifications' /> 
                 

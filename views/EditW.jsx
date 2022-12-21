@@ -10,8 +10,13 @@ class EditA extends React.Component{
     <link rel="stylesheet" type="text/css" href="/styles/edit.css"/>
     <img src={`${this.props.Weapons.Img}`} alt="Image of Item Selected" />
                 <form action={`/Weapons/${this.props.Weapons._id}?_method=PUT`} method="POST">
+            <div className='modifyItems'> 
+                
+                <div className='imageClear'>
                 Img: <input type='image' name='img' disabled  defaultValue={this.props.Weapons.Img} />
-                 <br />
+                </div>
+                
+                <br />
                 Name: <input type='text' name='name' disabled defaultValue={this.props.Weapons.Name}/>
                  <br />
                  Rarity: <input type='text' name='Rarity' defaultValue={this.props.Weapons.Rarity} />
@@ -29,6 +34,7 @@ class EditA extends React.Component{
                  Quantity_Left: <input type='number' name='Quantity_Left' defaultValue={this.props.Weapons.Quantity_Left} />
                  <br />
                  Cost: <input type='text' name='Cost' defaultValue={this.props.Weapons.Cost} />
+            </div>
                  <br />
                  <input type='Submit' name="" value='Set the Modifications' /> 
                 
