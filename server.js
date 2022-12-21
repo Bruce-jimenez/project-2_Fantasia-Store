@@ -51,11 +51,6 @@ mongoose.connect(process.env.MONGO_URI, {
 ///////////////////////////////
 
 ///////////////////////
-//Main Page (A home page to direct to each different part of the store)
-
-// app.get("/MainPG", (req, res) =>{
-//    res.render("Main");
-// });
 
 
 app.get("/", (req, res) =>{
