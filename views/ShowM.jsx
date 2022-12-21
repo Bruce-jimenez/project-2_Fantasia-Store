@@ -19,9 +19,10 @@ class ShowM extends React.Component{
     return(
         <div>
     <link rel="stylesheet" type="text/css" href="/styles/show.css"/>
-            <h1>Miscellaneous Show Page</h1>
+            <h1 className='Title'>Miscellaneous Show Page</h1>
             <img src={`${this.props.Miscellaneous.Img}`} alt="Image of Item Selected" />
             <br />
+        <div className='txtBody'>
             {this.props.Miscellaneous.Name} is of {this.props.Miscellaneous.Rarity} rarity. It is made of {this.props.Miscellaneous.Material}.
                 <br />
             Stats 1: {this.props.Miscellaneous.Stats1}
@@ -32,6 +33,7 @@ class ShowM extends React.Component{
                 <br />
             There is only {this.props.Miscellaneous.Quantity_Left} left at a price of {" "}
               {this.props.Miscellaneous.Cost}.
+        </div>            
                 <br />
 
                 {buyingAction()}

@@ -15,13 +15,15 @@ render(){
     } else {
         return <h3>Out of Stock</h3>
     }
-    }
+}
+
     return(
         <div>
 <link rel="stylesheet" type="text/css" href="/styles/show.css"/>
-            <h1>Armor Show Page</h1>
+            <h1 className='Title'>Armor Show Page</h1>
             <img src={`${this.props.Armor.Img}`} alt="Image of Armor Selected" />
             <br />
+        <div className='txtBody'>
             {this.props.Armor.Name} is of {this.props.Armor.Rarity} rarity. It is made of {this.props.Armor.Material}.
                 <br />
             Stats 1: {this.props.Armor.Stats1}
@@ -34,6 +36,7 @@ render(){
                 <br />
             There is only {this.props.Armor.Quantity_Left} left at a price of {" "}
               {this.props.Armor.Cost}.
+        </div>  
                 <br />
 
                 {buyingAction()}

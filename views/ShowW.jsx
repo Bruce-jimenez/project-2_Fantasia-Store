@@ -23,6 +23,7 @@ const buyingAction = () => {
             <h1 className='Title'>Weapons Show Page</h1>
             <img src={`${this.props.Weapons.Img}`} alt="Image of Weapon Selected" />
             <br />
+    <div className='txtBody'>
             {this.props.Weapons.Name} is of {this.props.Weapons.Rarity} rarity. It is made of {this.props.Weapons.Material}.
                 <br />
             Stats 1: {this.props.Weapons.Stats1}
@@ -35,6 +36,8 @@ const buyingAction = () => {
                 <br />
             There is only {this.props.Weapons.Quantity_Left} left at a price of {" "}
               {this.props.Weapons.Cost}.
+    </div>     
+                
                 <br />
             {buyingAction()}
                 
