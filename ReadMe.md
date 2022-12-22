@@ -1,6 +1,6 @@
-#The Fantasia Store
+# The Fantasia Store
 
-##About the Project and The Motivation Behind It
+## About the Project and The Motivation Behind It
 
 This is project 2 based in back-end development. This interacts with the database No-SQL database such as MongoDB.
  As such we are dealing with entry and retrieval of information from databases and routes.
@@ -9,12 +9,12 @@ The story behind the creation of this project is that I am much of a fantasy fan
  As such in this manner there will now there be a creation of a store. As such there should always there be 3 things a store should have as such 
  weapons in a fantasy setting, armor to protect yourself, and utilities for any situation, expected or unexpected.
 
-#Video Demonstration
+# Video Demonstration
 **Disclaimer - I do not know how to remove the watermark from the video**
 
 [Pre Recorded Demonstration](https://youtu.be/Ov4rF1WaPJQ)
 
-#ScreenShots:
+# ScreenShots:
 
 ![Armor Index Pages](./projectImages/armorIndexImg.jpg)
 
@@ -40,7 +40,7 @@ The story behind the creation of this project is that I am much of a fantasy fan
 
 ![Weapons Create Pages](./projectImages/weaponsCreateImg.jpg)
 
-#Tech Used:
+# Tech Used:
 
 -JavaScript
 -CSS
@@ -50,10 +50,10 @@ The story behind the creation of this project is that I am much of a fantasy fan
 -AWS
 -MongoDB
 
-#Build Status:
+# Build Status:
 Project is a hosted and deployed via Render and is connected to the GitHub Repository to redeployed on new commits/pushes.
 
-#Getting this project:
+# Getting this project:
 
 **Step 1: Clone (or fork) the repository**
 
@@ -79,7 +79,7 @@ Create your own .env file for the databases
 Running this code in the terminal should run everything on its own.
 `Nodemon`
 
-#How to Use:
+# How to Use:
 
 To First Access any of the first pages it would be localhost:3000/
 
@@ -87,7 +87,7 @@ Then which every database which you want to access, such as (Armor, Miscellaneou
 
 Then from there everything should be easy as a click of a button.
 
-#Improvements:
+# Improvements:
 
 Where it all could be redirected to a page and as such create a database where it could sort which bit of data would be in which sections. As such three important areas would be:
 
@@ -97,7 +97,7 @@ Where it all could be redirected to a page and as such create a database where i
 
 -More development as a store
 
-#Credits:
+# Credits:
 
 -Cycle 28
 
@@ -123,12 +123,12 @@ Create Img - https://i.pinimg.com/originals/6e/6a/00/6e6a00eb540f087edae078afec8
 
 Show Img - https://images2.alphacoders.com/201/thumb-1920-201532.jpg
 
-#Disclaimer:
+# Disclaimer:
 
 This a project for demonstration purposes.
 No profit was or is generated from this project directly.
 
-#License:
+# License:
 
 MIT License
 
