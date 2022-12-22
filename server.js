@@ -3,9 +3,9 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 const port = 3000;
-// const frontpg = require("./models/main")
 const methodOverride = require('method-override');
- const buyingArmor = require("./models/Armor");
+
+const buyingArmor = require("./models/Armor");
  const buyingWeapons = require("./models/Weapons");
  const buyingMisc = require("./models/Miscellaneous");
 
