@@ -10,7 +10,7 @@ The story behind the creation of this project is that I am much of a fantasy fan
  weapons in a fantasy setting, armor to protect yourself, and utilities for any situation, expected or unexpected.
 
 #Video Demonstration
-
+**Disclaimer - I do not know how to remove the watermark from the video**
 
 
 #ScreenShots:
