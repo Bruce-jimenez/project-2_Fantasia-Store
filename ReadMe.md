@@ -13,25 +13,33 @@ The story behind the creation of this project is that I am much of a fantasy fan
 
 
 
-#ScreenShots
+#ScreenShots:
 
 ![Armor Index Pages](./projectImages/armorIndexImg.jpg)
+
 ![Miscellaneous Index Pages](./projectImages/miscellaneousIndexImg.jpg)
+
 ![Weapons Index Pages](./projectImages/weaponsIndexImg.jpg)
 
 ![Armor Show Pages](./projectImages/armorShowImg.jpg)
+
 ![Miscellaneous Show Pages](./projectImages/miscellaneousShowImg.jpg)
+
 ![Weapons Show Pages](./projectImages/weaponsShowImg.jpg)
 
 ![Armor Edit Pages](./projectImages/armorEditImg.jpg)
+
 ![Miscellaneous Edit Pages](./projectImages/miscellaneousEditImg.jpg)
+
 ![Weapons Edit Pages](./projectImages/weaponsEditImg.jpg)
 
 ![Armor Create Pages](./projectImages/armorCreateImg.jpg)
+
 ![Miscellaneous Create Pages](./projectImages/miscellaneousCreateImg.jpg)
+
 ![Weapons Create Pages](./projectImages/weaponsCreateImg.jpg)
 
-#Tech Used
+#Tech Used:
 
 -JavaScript
 -CSS
@@ -41,10 +49,10 @@ The story behind the creation of this project is that I am much of a fantasy fan
 -AWS
 -MongoDB
 
-#Build Status
+#Build Status:
 Project is a hosted and deployed via Render and is connected to the GitHub Repository to redeployed on new commits/pushes.
 
-#Getting this project
+#Getting this project:
 
 **Step 1: Clone (or fork) the repository**
 
@@ -66,22 +74,32 @@ Create your own .env file for the databases
 ![MongoDB entering](./projectImages/mongoDBentering.jpg)
 
 **Step 4: Run the store**
+
 Running this code in the terminal should run everything on its own.
 `Nodemon`
 
-#How to Use
+#How to Use:
+
 To First Access any of the first pages it would be localhost:3000/
+
 Then which every database which you want to access, such as (Armor, Miscellaneous, or Weapons) just add it exactly after the `localhost:3000/` after installing the program from Github
+
 Then from there everything should be easy as a click of a button.
 
-#Improvements
+#Improvements:
+
 Where it all could be redirected to a page and as such create a database where it could sort which bit of data would be in which sections. As such three important areas would be:
+
 -Ease of use to get to the databases
+
 -Organization of data
+
 -More development as a store
 
-#Credits
+#Credits:
+
 -Cycle 28
+
 --- Especially
 -- Richard
 -- Ashunti
@@ -90,20 +108,27 @@ Where it all could be redirected to a page and as such create a database where i
 -- Cody Jennings
 
 With the biggest help of:
+
 -Kasper Kain
 -Tishana Trainor
 
 -Images from the pages themselves:
 
 Index Img -  https://i.pinimg.com/originals/48/e9/51/48e951aeca534599fb39d8fdc02519b6.jpg
+
 Edit Img - https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/546170/ca0a0d7ac22a154c85da48b05ca77ba571e5f168.jpg
+
 Create Img - https://i.pinimg.com/originals/6e/6a/00/6e6a00eb540f087edae078afec8156b8.jpg
+
 Show Img - https://images2.alphacoders.com/201/thumb-1920-201532.jpg
 
-#Disclaimer
+#Disclaimer:
+
 This a project for demonstration purposes.
 No profit was or is generated from this project directly.
 
-#License
+#License:
+
 MIT License
+
 MIT © [Bruce Jimenez](https://www.linkedin.com/in/bruce-jimenez-a2b66822b/)
